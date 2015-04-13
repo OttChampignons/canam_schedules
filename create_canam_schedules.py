@@ -81,6 +81,10 @@ for url, month in urls:
 # Collect games by team
 teams = defaultdict(list)
 
+# Exhibition Games
+games.append(Game('Trois-Rivières', 'Ottawa', arrow.get(datetime.datetime(year, 5, 16, 13, 35, 0), 'US/Eastern')))
+games.append(Game('Ottawa', 'Trois-Rivières', arrow.get(datetime.datetime(year, 5, 17, 13, 35, 0), 'US/Eastern')))
+
 for g in games:
     teams[g.home].append(g)
     teams[g.away].append(g)
